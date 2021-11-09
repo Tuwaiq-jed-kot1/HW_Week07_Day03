@@ -54,7 +54,7 @@
                 motion:customColorValue="@color/black" />
             <CustomAttribute
                 motion:attributeName="backgroundDrawable"
-                motion:customColorDrawableValue="@color/purple_200" />
+                motion:customColorDrawableValue="@android:color/holo_red_dark" />
         </Constraint>
         <Constraint
             android:layout_height="wrap_content"

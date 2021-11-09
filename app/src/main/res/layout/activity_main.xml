@@ -11,13 +11,17 @@
         android:id="@+id/drawPathCustomView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:background="#D61515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/CustomViewId"
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:rotation="360"
         android:text="Custom View"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="100dp"

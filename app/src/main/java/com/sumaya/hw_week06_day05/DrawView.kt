@@ -12,15 +12,15 @@ import android.view.View
 
 
 class DrawView(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
-
     private var paint: Paint? = null
     private var path: Path? = null
 
     init {
         paint = Paint()
         path = Path()
+
         paint!!.color = Color.BLACK
-        paint!!.strokeWidth = 10f
+        paint!!.strokeWidth = 12F
         paint!!.style = Paint.Style.STROKE
         paint!!.isAntiAlias = true
     }
@@ -29,8 +29,8 @@ class DrawView(context: Context, attrs: AttributeSet? = null) : View(context, at
         canvas!!.drawPath(path!!, paint!!)
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val xPos: Float = event!!.x
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        val xPos: Float = event.x
         val yPos: Float = event.y
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
@@ -40,10 +40,10 @@ class DrawView(context: Context, attrs: AttributeSet? = null) : View(context, at
                 path!!.lineTo(xPos, yPos)
             }
             MotionEvent.ACTION_UP -> {
-                Log.i("DONE DRAWING","WHEN ACTION UP THE LINE STOPS")
+                Log.i("Drawing"," Draw stop  ")
             }
             else -> {
-                Log.i("LINE45","Something wrong here line 45 DrawPath")
+                Log.i("Wrong"," wrong in Draw View class ")
             }
         }
         invalidate()
