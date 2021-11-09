@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="myFirstStyle">
+        <item name="strokeColor">@color/black</item>
+    </style>
+    <style name="mySecondStyle">
+        <item name="strokeColor">@color/white</item>
+    </style>
+</resources>
