@@ -10,7 +10,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 
-class DrawPath(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
+class DrawPathCustomView(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private var paint: Paint? = null
     private var path: Path? = null
@@ -39,7 +39,7 @@ class DrawPath(context: Context, attrs: AttributeSet? = null) : View(context, at
                 path!!.lineTo(xPos, yPos)
             }
             MotionEvent.ACTION_UP -> {
-
+                Log.i("DONE DRAWING","WHEN ACTION UP THE LINE STOPS")
             }
             else -> {
                 Log.i("LINE45","Something wrong here line 45 DrawPath")
