@@ -40,6 +40,7 @@ tools:context=".MainActivity">
         android:text="Click to change the background to black"
         tools:layout_editor_absoluteX="106dp"
         android:textSize="20dp"
+        android:gravity="center"
         tools:layout_editor_absoluteY="519dp" />
 
     <Button

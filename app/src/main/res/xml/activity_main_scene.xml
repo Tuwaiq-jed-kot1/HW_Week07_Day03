@@ -31,8 +31,8 @@
                 motion:customColorValue="@color/white" />
         </Constraint>
         <Constraint
-            android:layout_height="37dp"
-            android:layout_width="295dp"
+            android:layout_height="97dp"
+            android:layout_width="289dp"
             motion:layout_constraintStart_toStartOf="@+id/signatureView"
             android:id="@+id/textView2"
             motion:layout_constraintEnd_toEndOf="@+id/signatureView"
