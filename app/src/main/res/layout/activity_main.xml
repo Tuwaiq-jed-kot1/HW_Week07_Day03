@@ -61,6 +61,15 @@
 
     </LinearLayout>
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/paint_view"
+        android:layout_width="match_parent"
+        android:layout_height="690dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
     <Button
         android:id="@+id/animation"
         android:layout_width="wrap_content"
