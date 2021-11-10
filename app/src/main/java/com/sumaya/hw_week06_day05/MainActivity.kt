@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.constraintlayout.motion.widget.MotionLayout
 import com.sumaya.hw_week06_day05.PaintView.Companion.colorList
 import com.sumaya.hw_week06_day05.PaintView.Companion.currentBrush
 import com.sumaya.hw_week06_day05.PaintView.Companion.pathList
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val blackBtn = findViewById<ImageButton>(R.id.blackColor)
         val whiteBtn = findViewById<ImageButton>(R.id.whiteColor)
         val cleanAll = findViewById<ImageButton>(R.id.clean)
+        val motion = findViewById<MotionLayout>(R.id.relativeLayout2)
 
         //to change the color
         redBtn.setOnClickListener {
@@ -58,6 +60,8 @@ class MainActivity : AppCompatActivity() {
             path.reset()
             Toast.makeText(this,"clean",Toast.LENGTH_LONG).show()
         }
+
+
     }
 
     private fun currentColor(color:Int){
