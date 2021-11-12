@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="5000"
+        motion:motionInterpolator="overshoot">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@+id/CustomViewId" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="52dp"
+            android:layout_width="211dp"
+            android:id="@+id/CustomViewId"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/drawPathCustomView"
+            motion:layout_constraintVertical_bias="0.023" >
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/purple_500" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/drawPathCustomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_editor_absoluteY="0dp"
+            motion:layout_editor_absoluteX="0dp">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/white" />
+            <CustomAttribute
+                motion:attributeName="background"
+                motion:customColorDrawableValue="@color/purple_200" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/drawPathCustomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_editor_absoluteY="0dp"
+            motion:layout_editor_absoluteX="0dp">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/black" />
+            <CustomAttribute
+                motion:attributeName="backgroundDrawable"
+                motion:customColorDrawableValue="@android:color/holo_red_dark" />
+        </Constraint>
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/CustomViewId"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/drawPathCustomView"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.976" >
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/teal_200" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
