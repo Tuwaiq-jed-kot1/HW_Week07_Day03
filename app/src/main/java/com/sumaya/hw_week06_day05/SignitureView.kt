@@ -16,8 +16,8 @@ class SignitureView(context: Context, attrs: AttributeSet? = null):
             paint = Paint()
             path = Path()
             paint!!.isAntiAlias = true
-            paint!!.color = Color.WHITE
-            paint!!.strokeWidth = 15f
+            paint!!.color = Color.YELLOW
+            paint!!.strokeWidth = 15F
             paint!!.style = Paint.Style.STROKE
 
         }
